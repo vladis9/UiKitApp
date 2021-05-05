@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,6 +38,21 @@
                                     <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="nKo-TF-AbS"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZLU-h0-mK3">
+                                <rect key="frame" x="57" y="315" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVY-AH-ASD">
+                                <rect key="frame" x="57" y="399" width="300" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7G-cL-UiS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96143504218817311" green="1" blue="0.77559719257976978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,18 +60,26 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V8v-k5-NBL" secondAttribute="trailing" constant="57" id="3Bs-6L-ZrA"/>
                             <constraint firstItem="V8v-k5-NBL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="9BG-8o-rMe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="15e-hw-EVu" secondAttribute="trailing" constant="57" id="Bko-WE-dg0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZLU-h0-mK3" secondAttribute="trailing" constant="57" id="Jv6-GD-w2s"/>
                             <constraint firstItem="15e-hw-EVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="Ljh-xK-uY3"/>
                             <constraint firstItem="V8v-k5-NBL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="NcQ-ga-Vq7"/>
                             <constraint firstItem="zNI-M2-ZyU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Udk-SQ-aPn"/>
+                            <constraint firstItem="CVY-AH-ASD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="e3R-TC-0ZC"/>
+                            <constraint firstItem="CVY-AH-ASD" firstAttribute="top" secondItem="ZLU-h0-mK3" secondAttribute="bottom" constant="50" id="eff-Um-0Ug"/>
                             <constraint firstItem="15e-hw-EVu" firstAttribute="top" secondItem="zNI-M2-ZyU" secondAttribute="bottom" constant="50" id="mgn-pZ-4Qx"/>
+                            <constraint firstItem="ZLU-h0-mK3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="nRb-VJ-vjv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zNI-M2-ZyU" secondAttribute="trailing" constant="20" id="oJS-qA-uW0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CVY-AH-ASD" secondAttribute="trailing" constant="57" id="op8-Qz-0x1"/>
+                            <constraint firstItem="ZLU-h0-mK3" firstAttribute="top" secondItem="15e-hw-EVu" secondAttribute="bottom" constant="50" id="qAt-et-wJL"/>
                             <constraint firstItem="zNI-M2-ZyU" firstAttribute="top" secondItem="V8v-k5-NBL" secondAttribute="bottom" constant="40" id="sql-8f-002"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="CVY-AH-ASD" id="XhK-i5-1vN"/>
                         <outlet property="mainLabel" destination="zNI-M2-ZyU" id="Tfg-Y0-3Sz"/>
                         <outlet property="segmentedControl" destination="V8v-k5-NBL" id="bpD-bU-6Rm"/>
                         <outlet property="slider" destination="15e-hw-EVu" id="xEN-0z-iRM"/>
+                        <outlet property="textField" destination="ZLU-h0-mK3" id="H5O-uq-7aO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,4 +87,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="78.348214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
