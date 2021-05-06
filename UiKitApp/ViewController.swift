@@ -60,8 +60,31 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed() {
+        guard let inputText = textField.text, !inputText.isEmpty else { return }
         
-        mainLabel.text = textField.text
+        if let _ = Double(inputText) {
+            showAlert(title: "Wrong format", message: "Please enter your name")
+            print("Wrong format")
+        } else {
+            mainLabel.text = inputText
+            textField.text = nil
+        }
     }
 }
 
+extension ViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default) {_ in
+            self.textField.text = ""
+        }
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
