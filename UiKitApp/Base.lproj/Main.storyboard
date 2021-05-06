@@ -13,68 +13,94 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UiKitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-k5-NBL">
-                                <rect key="frame" x="57" y="93" width="300" height="32"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeSegment" destination="BYZ-38-t0r" eventType="valueChanged" id="OTN-iC-pKD"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNI-M2-ZyU">
-                                <rect key="frame" x="20" y="164" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="15e-hw-EVu">
-                                <rect key="frame" x="55" y="235" width="304" height="31"/>
-                                <connections>
-                                    <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="nKo-TF-AbS"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZLU-h0-mK3">
-                                <rect key="frame" x="57" y="315" width="300" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVY-AH-ASD">
-                                <rect key="frame" x="57" y="399" width="300" height="30"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7G-cL-UiS"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SW-0L-5jQ">
+                                <rect key="frame" x="0.0" y="73" width="414" height="1093"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-k5-NBL">
+                                        <rect key="frame" x="57" y="20" width="300" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changeSegment" destination="BYZ-38-t0r" eventType="valueChanged" id="OTN-iC-pKD"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNI-M2-ZyU">
+                                        <rect key="frame" x="20" y="91" width="374" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="15e-hw-EVu">
+                                        <rect key="frame" x="55" y="162" width="304" height="31"/>
+                                        <connections>
+                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="nKo-TF-AbS"/>
+                                        </connections>
+                                    </slider>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZLU-h0-mK3">
+                                        <rect key="frame" x="57" y="242" width="300" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVY-AH-ASD">
+                                        <rect key="frame" x="57" y="326" width="300" height="30"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7G-cL-UiS"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="azd-P4-m3B">
+                                        <rect key="frame" x="0.0" y="406" width="414" height="216"/>
+                                        <connections>
+                                            <action selector="changeDate" destination="BYZ-38-t0r" eventType="valueChanged" id="e7w-pw-a2E"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zNI-M2-ZyU" secondAttribute="trailing" constant="20" id="8wp-ea-TjM"/>
+                                    <constraint firstItem="V8v-k5-NBL" firstAttribute="trailing" secondItem="15e-hw-EVu" secondAttribute="trailing" id="BLS-gf-66F"/>
+                                    <constraint firstItem="V8v-k5-NBL" firstAttribute="top" secondItem="NvW-xy-aS6" secondAttribute="top" constant="20" id="Dcs-qW-dYB"/>
+                                    <constraint firstItem="V8v-k5-NBL" firstAttribute="leading" secondItem="NvW-xy-aS6" secondAttribute="leading" constant="57" id="H3F-gN-Geh"/>
+                                    <constraint firstItem="CVY-AH-ASD" firstAttribute="top" secondItem="ZLU-h0-mK3" secondAttribute="bottom" constant="50" id="JfD-Wv-lei"/>
+                                    <constraint firstItem="15e-hw-EVu" firstAttribute="leading" secondItem="ZLU-h0-mK3" secondAttribute="leading" id="T6N-5K-6tE"/>
+                                    <constraint firstItem="azd-P4-m3B" firstAttribute="leading" secondItem="NvW-xy-aS6" secondAttribute="leading" id="Uf3-IG-mZi"/>
+                                    <constraint firstItem="azd-P4-m3B" firstAttribute="centerX" secondItem="CVY-AH-ASD" secondAttribute="centerX" id="Vhy-zR-IP0"/>
+                                    <constraint firstItem="ZLU-h0-mK3" firstAttribute="leading" secondItem="CVY-AH-ASD" secondAttribute="leading" id="aEK-LB-JNP"/>
+                                    <constraint firstItem="V8v-k5-NBL" firstAttribute="leading" secondItem="15e-hw-EVu" secondAttribute="leading" id="azR-3u-s4a"/>
+                                    <constraint firstItem="15e-hw-EVu" firstAttribute="top" secondItem="zNI-M2-ZyU" secondAttribute="bottom" constant="50" id="cgp-Mg-0gn"/>
+                                    <constraint firstItem="azd-P4-m3B" firstAttribute="top" secondItem="CVY-AH-ASD" secondAttribute="bottom" constant="50" id="cz0-RD-XFb"/>
+                                    <constraint firstItem="ZLU-h0-mK3" firstAttribute="trailing" secondItem="CVY-AH-ASD" secondAttribute="trailing" id="dWv-EY-rnV"/>
+                                    <constraint firstItem="zNI-M2-ZyU" firstAttribute="leading" secondItem="NvW-xy-aS6" secondAttribute="leading" constant="20" id="g9E-WW-JIi"/>
+                                    <constraint firstItem="V8v-k5-NBL" firstAttribute="centerX" secondItem="3SW-0L-5jQ" secondAttribute="centerX" id="gfn-hN-zcn"/>
+                                    <constraint firstAttribute="bottom" secondItem="CVY-AH-ASD" secondAttribute="bottom" constant="737" id="q5W-yq-6F8"/>
+                                    <constraint firstItem="zNI-M2-ZyU" firstAttribute="top" secondItem="V8v-k5-NBL" secondAttribute="bottom" constant="40" id="rax-n5-lqX"/>
+                                    <constraint firstItem="ZLU-h0-mK3" firstAttribute="top" secondItem="15e-hw-EVu" secondAttribute="bottom" constant="50" id="toG-OW-mZp"/>
+                                    <constraint firstItem="V8v-k5-NBL" firstAttribute="centerX" secondItem="zNI-M2-ZyU" secondAttribute="centerX" id="w0H-F9-o8y"/>
+                                    <constraint firstItem="15e-hw-EVu" firstAttribute="trailing" secondItem="ZLU-h0-mK3" secondAttribute="trailing" id="y1K-bN-dcK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="KIa-2a-zWy"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="NvW-xy-aS6"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96143504218817311" green="1" blue="0.77559719257976978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V8v-k5-NBL" secondAttribute="trailing" constant="57" id="3Bs-6L-ZrA"/>
-                            <constraint firstItem="V8v-k5-NBL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="9BG-8o-rMe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="15e-hw-EVu" secondAttribute="trailing" constant="57" id="Bko-WE-dg0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZLU-h0-mK3" secondAttribute="trailing" constant="57" id="Jv6-GD-w2s"/>
-                            <constraint firstItem="15e-hw-EVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="Ljh-xK-uY3"/>
-                            <constraint firstItem="V8v-k5-NBL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="NcQ-ga-Vq7"/>
-                            <constraint firstItem="zNI-M2-ZyU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Udk-SQ-aPn"/>
-                            <constraint firstItem="CVY-AH-ASD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="e3R-TC-0ZC"/>
-                            <constraint firstItem="CVY-AH-ASD" firstAttribute="top" secondItem="ZLU-h0-mK3" secondAttribute="bottom" constant="50" id="eff-Um-0Ug"/>
-                            <constraint firstItem="15e-hw-EVu" firstAttribute="top" secondItem="zNI-M2-ZyU" secondAttribute="bottom" constant="50" id="mgn-pZ-4Qx"/>
-                            <constraint firstItem="ZLU-h0-mK3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="nRb-VJ-vjv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zNI-M2-ZyU" secondAttribute="trailing" constant="20" id="oJS-qA-uW0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CVY-AH-ASD" secondAttribute="trailing" constant="57" id="op8-Qz-0x1"/>
-                            <constraint firstItem="ZLU-h0-mK3" firstAttribute="top" secondItem="15e-hw-EVu" secondAttribute="bottom" constant="50" id="qAt-et-wJL"/>
-                            <constraint firstItem="zNI-M2-ZyU" firstAttribute="top" secondItem="V8v-k5-NBL" secondAttribute="bottom" constant="40" id="sql-8f-002"/>
+                            <constraint firstItem="3SW-0L-5jQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OBB-Bx-TSI"/>
+                            <constraint firstItem="3SW-0L-5jQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zkr-W8-KpO"/>
+                            <constraint firstItem="3SW-0L-5jQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="gYh-sg-eq0"/>
+                            <constraint firstItem="3SW-0L-5jQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vys-BT-9wI"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="1200"/>
                     <connections>
+                        <outlet property="datePicker" destination="azd-P4-m3B" id="Zpq-3J-iag"/>
                         <outlet property="doneButton" destination="CVY-AH-ASD" id="XhK-i5-1vN"/>
                         <outlet property="mainLabel" destination="zNI-M2-ZyU" id="Tfg-Y0-3Sz"/>
                         <outlet property="segmentedControl" destination="V8v-k5-NBL" id="bpD-bU-6Rm"/>

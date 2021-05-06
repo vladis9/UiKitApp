@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     @IBOutlet var textField: UITextField!
     @IBOutlet var doneButton: UIButton!
+    @IBOutlet var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,10 @@ class ViewController: UIViewController {
         slider.thumbTintColor = .blue
         
         mainLabel.text = String(slider.value)
+        
+        //Setup Date Picker
+        datePicker.locale = Locale(identifier: "ru_UA")
+//        datePicker.locale = Locale.current
     }
 
     @IBAction func changeSegment() {
@@ -69,6 +74,14 @@ class ViewController: UIViewController {
             mainLabel.text = inputText
             textField.text = nil
         }
+    }
+    @IBAction func changeDate() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.locale = Locale(identifier: "ru_UA")
+        
+        let dateValue = dateFormatter.string(from: datePicker.date)
+        mainLabel.text = dateValue
     }
 }
 
