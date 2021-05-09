@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var textField: UITextField!
     @IBOutlet var doneButton: UIButton!
     @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var hideAllElements: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()

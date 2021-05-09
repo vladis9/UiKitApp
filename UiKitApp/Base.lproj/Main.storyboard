@@ -116,6 +116,7 @@
                     <connections>
                         <outlet property="datePicker" destination="azd-P4-m3B" id="Zpq-3J-iag"/>
                         <outlet property="doneButton" destination="CVY-AH-ASD" id="XhK-i5-1vN"/>
+                        <outlet property="hideAllElements" destination="SBb-YJ-MQF" id="pf8-u1-8mv"/>
                         <outlet property="mainLabel" destination="zNI-M2-ZyU" id="Tfg-Y0-3Sz"/>
                         <outlet property="segmentedControl" destination="V8v-k5-NBL" id="bpD-bU-6Rm"/>
                         <outlet property="slider" destination="15e-hw-EVu" id="xEN-0z-iRM"/>
