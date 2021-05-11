@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet var doneButton: UIButton!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var hideAllElements: UISwitch!
+    @IBOutlet var switchLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,10 @@ class ViewController: UIViewController {
         
         //Setup Date Picker
         datePicker.locale = Locale(identifier: "ru_UA")
-//        datePicker.locale = Locale.current
+        //datePicker.locale = Locale.current
+        
+        hideAllElements.onTintColor = .red
+        switchLabel.text = "Скрыть все элементы"
     }
 
     @IBAction func changeSegment() {
@@ -83,6 +87,16 @@ class ViewController: UIViewController {
         
         let dateValue = dateFormatter.string(from: datePicker.date)
         mainLabel.text = dateValue
+    }
+    @IBAction func switchAction() {
+        segmentedControl.isHidden.toggle()
+        mainLabel.isHidden.toggle()
+        slider.isHidden.toggle()
+        textField.isHidden.toggle()
+        doneButton.isHidden.toggle()
+        datePicker.isHidden.toggle()
+        
+        switchLabel.text = hideAllElements.isOn ? "Скрыть все элементы" : "Отобразить все элементы"
     }
 }
 
